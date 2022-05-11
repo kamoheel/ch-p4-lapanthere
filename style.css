@@ -735,8 +735,12 @@ h4 {
     margin-top: 24px;
 }
 
-.white {
+.black {
     color: #000!important;
+}
+
+.white {
+    color: #fff!important;
 }
 
 .portfolio-thumb {
@@ -753,8 +757,9 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: #364577;
     padding: 40px 40px 40px 40px;
+    border-radius: 20px;
 }
 
 .bold-link {
@@ -819,11 +824,44 @@ h4 {
 }
 
 .bg-banniere {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* Permet de modifier l'opacity de l'image de fond seulement */
+.bg-banniere::before {
+    content: "";
     background-image: url("img/agence-la-panthere.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-presentation::before {
+    content: "";
+    background-image: url("img/image-de-presentation.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
 }
 
 blockquote {
@@ -837,7 +875,7 @@ blockquote {
 
 blockquote ~ p {
     font-size: 3vh;
-    color: rgba(0, 0, 0, .5)!important;   
+    color: rgba(0, 0, 0, .7)!important;   
 }
 
 input, textarea {
@@ -915,6 +953,22 @@ a:focus {
 
 }
 
+.sizeplus {
+    font-size: 16px;
+}
+
+.text-bg {
+    margin: auto;
+    width: 60%;
+    background-color: #364577;
+    color: #fff!important;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.flexrow {
+    display: flex;
+}
 
 @media (max-width: 1024px) {
     .bloc {
