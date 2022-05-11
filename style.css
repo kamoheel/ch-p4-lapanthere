@@ -31,7 +31,7 @@ a:hover {
     width: 100%;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
+    padding: 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -655,7 +655,7 @@ a {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 100%;
 }
 
 .hero-bloc-text {
@@ -677,7 +677,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .tight-width-whitespace {
@@ -748,8 +748,11 @@ h4 {
 }
 
 .portfolio-row {
-    margin-bottom: 44px;
-    margin-top: 50px;
+    display: flex;
+    margin: auto;
+    padding: 0;
+    /* margin-bottom: 44px;
+    margin-top: 50px; */
 }
 
 .avatar {
@@ -776,12 +779,37 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.bgc-atomic-tangerine::before {
+    content: "";
     background-color: #F3976C;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .tc-white {
-    color: #FFFFFF!important;
-    text-shadow: 1px 1px 2px black;
+    color: #fff!important;
+    opacity: 1;
+    z-index: 1;
+}
+
+.tc-black {
+    text-align: center;
+    color: black;
+    opacity: 1;
+    z-index: 1;
 }
 
 .btn-atomic-tangerine {
@@ -828,8 +856,7 @@ h4 {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 /* Permet de modifier l'opacity de l'image de fond seulement */
 .bg-banniere::before {
@@ -869,12 +896,12 @@ blockquote {
     margin: auto;    
     font-style: italic;
     font-weight: 600;
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #575757;
 }
 
 blockquote ~ p {
-    font-size: 3vh;
+    font-size: 2vh;
     color: rgba(0, 0, 0, .7)!important;   
 }
 
@@ -885,7 +912,7 @@ input, textarea {
 }
 
 input {
-width: 250px;
+width: 80%;
 }
 
 .warning {
@@ -894,6 +921,7 @@ width: 250px;
 
 textarea{
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial;
+    width: 95%;
 }
 .form-group {
     margin-bottom: 5px;
@@ -950,7 +978,6 @@ a:focus {
     width: 50%;
     float: none;
     margin: auto;
-
 }
 
 .sizeplus {
@@ -968,6 +995,34 @@ a:focus {
 
 .flexrow {
     display: flex;
+}
+
+img {
+    margin: auto;
+}
+
+.col-sm-6 {
+    background-color: rgba(0, 0, 1, .1);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+#bloc-7 .col-sm-6  {
+    width: 70%;
+    margin: 10px auto;
+}
+
+#bloc-7 .col-sm-6 p {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -993,13 +1048,13 @@ a:focus {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -1018,8 +1073,8 @@ a:focus {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        /* padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right); */
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -1029,8 +1084,12 @@ a:focus {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        /* padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right); */
+    }
+
+    .flexrow {
+        flex-direction: column;
     }
 }
 
@@ -1170,6 +1229,19 @@ a:focus {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+
+    .flexrow, .portfolio-row {
+        flex-direction: column;
+    }
+
+    .col-sm-4 {
+        width: 75%;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-around;
     }
 }
 
