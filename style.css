@@ -1019,7 +1019,7 @@ img {
     margin: 10px auto;
 }
 
-#bloc-7 .col-sm-6 p {
+#bloc-7 .col-sm-6 p, #bloc-7 .col-sm-6 h2 {
     text-align: center;
 }
 
