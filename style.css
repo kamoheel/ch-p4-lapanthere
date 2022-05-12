@@ -911,9 +911,10 @@ blockquote ~ p {
 }
 
 input, textarea {
-    color: gray;
-    border: 1px solid gray;
+    color: #737373;
+    border: 1px solid #737373;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 input {
