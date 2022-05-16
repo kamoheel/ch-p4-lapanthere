@@ -702,10 +702,17 @@ p {
     font-weight: 700;
 }
 
-.social {
-    max-width: 400px;
-    margin: 20px auto;
+.social-bar {
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
 }
+
+.social {
+    margin: 20px; 
+}
+
+
 
 h2 {
     font-size: 22px;
@@ -798,7 +805,7 @@ h4 {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
 }
 
@@ -816,6 +823,8 @@ h4 {
 }
 
 .btn-atomic-tangerine {
+    width: 200px;
+    margin: auto;
     background: #F3976C;
     color: #000!important;
 }
@@ -980,6 +989,15 @@ a:focus {
     padding: 0;
 }
 
+.footer-link {
+    font-size: 16px;
+    margin: 20px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
 .col-sm-4 {
     width: 50%;
     float: none;
@@ -1034,6 +1052,7 @@ ul {
 .col-sm-12 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -1250,10 +1269,6 @@ ul {
         width: 75%;
     }
 
-    .social {
-        display: flex;
-        justify-content: space-around;
-    }
 }
 
 @media (max-width: 400px) {
